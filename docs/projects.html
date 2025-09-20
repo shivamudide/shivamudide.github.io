@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Mudide</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://web.mit.edu/favicon.ico">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'ssi-green': '#00ff00',
+                        'ssi-bg': '#0a0a0a',
+                        'ssi-text': '#ffffff',
+                        'ssi-gray': '#666666',
+                    },
+                    fontFamily: {
+                        'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background-color: #0a0a0a;
+            color: #f5f5f5; /* Offwhite text color */
+        }
+        
+        .ssi-link {
+            color: #00ff00;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .ssi-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-ssi-bg text-ssi-text min-h-screen">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto py-10 px-4">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-xl md:text-2xl font-bold mb-4 leading-tight">
+            Things I'm currently working on + interested in
+        </h1>
+        <a href="index.html" class="ssi-link text-sm hover:underline">
+            ← Back to home
+        </a>
+    </div>
+    
+    <!-- Projects Section -->
+    <div class="space-y-8">
+        
+        <!-- Current Work -->
+        <section>
+            <h2 class="text-lg font-semibold mb-4 text-ssi-green">Current Research</h2>
+            <div class="space-y-4">
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Physics-Informed Generative AI</h3>
+                    <p class="text-sm text-gray-300 mb-3">
+                        Developing neural networks that incorporate physical symmetries and constraints for materials science applications.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <a href="#" class="ssi-link text-xs px-2 py-1 border border-ssi-green rounded hover:bg-ssi-green hover:text-black transition-colors">
+                            Paper (Coming Soon)
+                        </a>
+                        <a href="#" class="ssi-link text-xs px-2 py-1 border border-ssi-green rounded hover:bg-ssi-green hover:text-black transition-colors">
+                            Code (Coming Soon)
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Diffusion Processes & Neural Networks</h3>
+                    <p class="text-sm text-gray-300 mb-3">
+                        Exploring the intersection of diffusion models and physics-based constraints for semiconductor discovery.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <a href="#" class="ssi-link text-xs px-2 py-1 border border-ssi-green rounded hover:bg-ssi-green hover:text-black transition-colors">
+                            Draft Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Past Work -->
+        <section>
+            <h2 class="text-lg font-semibold mb-4 text-ssi-green">Previous Work</h2>
+            <div class="space-y-4">
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">ML for Facial Recognition (Amazon)</h3>
+                    <p class="text-sm text-gray-300 mb-3">
+                        Developed machine learning models for facial recognition systems during my time at Amazon.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Vibrational Modes in GPUs (Onto)</h3>
+                    <p class="text-sm text-gray-300 mb-3">
+                        Analytical calculation of vibrational modes in GPU architectures for thermal optimization.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Physics Research (Caltech)</h3>
+                    <p class="text-sm text-gray-300 mb-3">
+                        Fundamental physics research during undergraduate studies at Caltech.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interests -->
+        <section>
+            <h2 class="text-lg font-semibold mb-4 text-ssi-green">Areas of Interest</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Generative Models</h3>
+                    <p class="text-sm text-gray-300">
+                        Exploring novel architectures for physics-aware generative modeling.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Materials Science</h3>
+                    <p class="text-sm text-gray-300">
+                        AI-accelerated discovery of new materials and semiconductors.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Neural Architecture</h3>
+                    <p class="text-sm text-gray-300">
+                        Building artificial brains that approach human-level understanding.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-700 rounded-lg p-4">
+                    <h3 class="font-medium mb-2">Physical Constraints</h3>
+                    <p class="text-sm text-gray-300">
+                        Embedding fundamental physics into AI architectures.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- Collaboration Call-to-Action -->
+    <div class="mt-12 pt-6 border-t border-gray-700 text-center">
+        <p class="text-sm text-gray-300 mb-2">
+            Interested in collaborating on any of these areas?
+        </p>
+        <a href="mailto:shiva271@mit.edu" class="ssi-link font-medium hover:underline">
+            shiva271@mit.edu
+        </a>
+    </div>
+    
+</div>
+    </div>
+    
+    <!-- React CDN for future use -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

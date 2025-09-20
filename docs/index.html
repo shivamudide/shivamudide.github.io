@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Mudide</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://web.mit.edu/favicon.ico">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'ssi-green': '#00ff00',
+                        'ssi-bg': '#0a0a0a',
+                        'ssi-text': '#ffffff',
+                        'ssi-gray': '#666666',
+                    },
+                    fontFamily: {
+                        'mono': ['Monaco', 'Menlo', 'Ubuntu Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background-color: #0a0a0a;
+            color: #f5f5f5; /* Offwhite text color */
+        }
+        
+        .ssi-link {
+            color: #00ff00;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .ssi-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-ssi-bg text-ssi-text min-h-screen">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto py-10 px-4 flex flex-col md:flex-row gap-8">
+    <!-- Left sidebar: Profile picture and social links -->
+    <div class="md:w-1/4 flex flex-col items-center md:items-start">
+        <img src="images/head.jpg" alt="Shiva Mudide" class="rounded-full w-32 h-32 mb-4 object-cover">
+        <div class="flex flex-col gap-2">
+            <a href="https://github.com/shivamudide" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2">
+                <i class="fab fa-github text-lg"></i> GitHub
+            </a>
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2">
+                <i class="fas fa-graduation-cap text-lg"></i> Google Scholar
+            </a>
+            <a href="https://twitter.com/MudideShiva" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2 mt-2">
+                <i class="fa-brands fa-twitter text-lg"></i> Twitter
+            </a>
+            <a href="projects.html" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2 mt-2">
+                <i class="fas fa-code text-lg"></i> Projects
+            </a>
+            <a href="resume.html" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2 mt-2">
+                <i class="fas fa-file-alt text-lg"></i> Resume / CV
+            </a>
+            <p class="text-xs text-gray-300 mt-1 ml-6">Contact [first name][Euler's number to 3 sig figs, no decimal]@mit.edu to collaborate</p>
+        </div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="md:w-3/4">
+    <!-- Main heading -->
+    <h1 class="text-xl md:text-2xl font-bold mb-4 leading-tight">
+        Shiva Mudide
+    </h1>
+    
+    <!-- Main content paragraphs -->
+    <div class="space-y-3 text-xs md:text-sm leading-relaxed">
+        <p>
+            I am a PhD student at MIT working on physics-informed generative AI. 
+            Previously, I recieved my B.S. in Physics from Caltech, worked on ML for facial recognition as an engineer at Amazon, and analytically calculated vibrational spectra in voided GPUs as an AI research scientist intern at Onto. 
+            </p>
+        
+        <p>
+            I'm interested in aquiring a deep understanding of fundamental physics and ulitmately building an artifical brain that approaches that of a human. Along the journey, problems must be reduced to their simplest non-trivial forms that still contain the nuggets of difficulty.  Attempting this is painful and arudious, requiring deep work in isolation studded with bursts of collaboration.
+  </p>
+    </div>
+    
+    <!-- Animated sprite at bottom center -->
+    <div class="mt-6 flex justify-center">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/151.gif" 
+             alt="Animated Mew" 
+             class="pixelated opacity-100 hover:opacity-100 transition-opacity duration-300"
+             title="Mew">
+    </div>
+    
+    <!-- Newton Quotes Section -->
+    <div class="mt-6 pt-4 border-t border-gray-700">
+        <h3 class="text-xs font-semibold mb-3 text-gray-400">Sir Isaac Newton</h3>
+        <div class="space-y-2 text-xs leading-relaxed text-gray-300">
+            
+            <p class="italic">
+                "I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me."
+            </p>
+            <p class="italic">
+                "If others would think as hard as I did, they would get similar results."
+            </p>
+        </div>
+    </div>
+
+</div>
+</div>
+    
+    
+
+<!-- Optional React component placeholder -->
+<div id="react-components"></div>
+
+<script>
+    // Example of how to add React components later
+    // const { useState } = React;
+    
+    // function ContactForm() {
+    //     const [email, setEmail] = useState('');
+    //     
+    //     return React.createElement('div', { className: 'mt-8' },
+    //         React.createElement('input', {
+    //             type: 'email',
+    //             placeholder: 'Enter your email',
+    //             value: email,
+    //             onChange: (e) => setEmail(e.target.value),
+    //             className: 'bg-gray-800 text-white px-4 py-2 rounded'
+    //         })
+    //     );
+    // }
+    
+    // Uncomment to render React components
+    // const domContainer = document.querySelector('#react-components');
+    // ReactDOM.render(React.createElement(ContactForm), domContainer);
+</script>
+    </div>
+    
+    <!-- React CDN for future use -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
