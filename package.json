@@ -1,0 +1,29 @@
+{
+  "name": "ssi-website",
+  "version": "1.0.0",
+  "description": "A website inspired by Safe Superintelligence Inc.",
+  "main": "static/js/main.js",
+  "scripts": {
+    "build": "echo 'No build process needed - using CDN for React and Tailwind'",
+    "dev": "python manage.py runserver",
+    "start": "python manage.py runserver 0.0.0.0:8000"
+  },
+  "keywords": [
+    "django",
+    "react",
+    "tailwind",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  }
+}
+
+

@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume - Shiva Mudide{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto py-10 px-4">
+    <!-- Header with back link -->
+    <div class="mb-6">
+        <a href="{% url 'main:home' %}" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2 mb-4">
+            <i class="fas fa-arrow-left text-lg"></i> Back to Home
+        </a>
+        <h1 class="text-2xl md:text-3xl font-bold mb-2">Resume / CV</h1>
+        <p class="text-sm text-gray-400">Shiva Mudide</p>
+    </div>
+
+    <!-- PDF Viewer Container -->
+    <div class="bg-gray-900 rounded-lg p-4 shadow-lg">
+        <!-- PDF Controls -->
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
+            <div class="flex items-center gap-4">
+                <button onclick="downloadPDF()" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2">
+                    <i class="fas fa-download text-lg"></i> Download PDF
+                </button>
+                <button onclick="openPDFNewTab()" class="ssi-link text-sm font-medium hover:underline flex items-center gap-2">
+                    <i class="fas fa-external-link-alt text-lg"></i> Open in New Tab
+                </button>
+            </div>
+            <div class="flex items-center gap-2">
+                <button onclick="zoomOut()" class="bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded text-sm">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span id="zoomLevel" class="text-sm text-gray-400 min-w-[60px] text-center">100%</span>
+                <button onclick="zoomIn()" class="bg-gray-800 hover:bg-gray-700 text-white px-3 py-1 rounded text-sm">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- PDF Embed -->
+        <div class="relative bg-white rounded overflow-hidden" style="min-height: 600px;">
+            <iframe 
+                id="pdfViewer"
+                src="{% static 'resume.pdf' %}#toolbar=1&navpanes=0&scrollbar=1" 
+                width="100%" 
+                height="800px"
+                style="border: none; display: block;"
+                type="application/pdf">
+                <!-- Fallback for browsers that don't support iframe PDF viewing -->
+                <div class="p-8 text-center">
+                    <p class="text-gray-600 mb-4">Your browser doesn't support PDF viewing.</p>
+                    <a href="{% static 'resume.pdf' %}" 
+                       class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg inline-flex items-center gap-2"
+                       download="Shiva_Mudide_Resume.pdf">
+                        <i class="fas fa-download"></i> Download Resume PDF
+                    </a>
+                </div>
+            </iframe>
+        </div>
+
+        <!-- Mobile-friendly alternative -->
+        <div class="md:hidden mt-4 text-center">
+            <p class="text-sm text-gray-400 mb-3">For better mobile viewing:</p>
+            <a href="{% static 'resume.pdf' %}" 
+               class="ssi-link text-sm font-medium hover:underline inline-flex items-center gap-2"
+               target="_blank">
+                <i class="fas fa-mobile-alt"></i> Open PDF in Mobile Viewer
+            </a>
+        </div>
+    </div>
+
+ 
+
+<script>
+let currentZoom = 1.0;
+
+function downloadPDF() {
+    const link = document.createElement('a');
+    link.href = "{% static 'resume.pdf' %}";
+    link.download = 'Shiva_Mudide_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+function openPDFNewTab() {
+    window.open("{% static 'resume.pdf' %}", '_blank');
+}
+
+function zoomIn() {
+    currentZoom = Math.min(currentZoom + 0.1, 2.0);
+    updateZoom();
+}
+
+function zoomOut() {
+    currentZoom = Math.max(currentZoom - 0.1, 0.5);
+    updateZoom();
+}
+
+function updateZoom() {
+    const iframe = document.getElementById('pdfViewer');
+    const zoomLevel = document.getElementById('zoomLevel');
+    
+    // Update zoom display
+    zoomLevel.textContent = Math.round(currentZoom * 100) + '%';
+    
+    // Apply zoom to iframe (this works for some browsers)
+    iframe.style.transform = `scale(${currentZoom})`;
+    iframe.style.transformOrigin = 'top left';
+    
+    // Adjust container height based on zoom
+    const container = iframe.parentElement;
+    const newHeight = 800 * currentZoom;
+    iframe.style.height = newHeight + 'px';
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateZoom();
+});
+</script>
+{% endblock %}

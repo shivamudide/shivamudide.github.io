@@ -1,0 +1,61 @@
+/* Custom CSS for additional styling */
+
+/* Ensure consistent monospace font */
+body, html {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+    line-height: 1.6;
+}
+
+/* Enhanced link styling */
+.ssi-link {
+    color: #00ff00;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.ssi-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Ensure pixel-art sprites render crisply */
+.pixelated {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+}
